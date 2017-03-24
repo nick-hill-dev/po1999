@@ -105,7 +105,7 @@ begin
   SetColor(4); Rectangle(0,WorstPlayer*22+3,320,WorstPlayer*22+23);
   SetTextStyle(SansSerifFont, HorizDir, 4);
   SetColor(15); OutTextXY(1,350,'Level over - Press ''C'' to continue...');
-  REPEAT UNTIL readkey='C';
+  REPEAT UNTIL UpCase(ReadKey)='C';
 end;
 
 
@@ -134,15 +134,15 @@ begin
       SetFillStyle(1,0); Bar(291,71,599,147);
       SetColor(PLN); Str(PLN,S1);
       OutTextXY(300,80,'Player '+S1+' - Press key for UP:');
-      KUp[PLN]:=ReadKey;
+      KUp[PLN]:=UpCase(ReadKey);
       OutTextXY(300,92,'Player '+S1+' - Press key for DOWN:');
-      KDown[PLN]:=ReadKey;
+      KDown[PLN]:=UpCase(ReadKey);
       OutTextXY(300,104,'Player '+S1+' - Press key for LEFT:');
-      KLeft[PLN]:=ReadKey;
+      KLeft[PLN]:=UpCase(ReadKey);
       OutTextXY(300,116,'Player '+S1+' - Press key for RIGHT:');
-      KRight[PLN]:=ReadKey;
+      KRight[PLN]:=UpCase(ReadKey);
       OutTextXY(300,128,'Player '+S1+' - Press key for FIRE:');
-      KFire[PLN]:=ReadKey;
+      KFire[PLN]:=UpCase(ReadKey);
       KeysSetup[PLN]:=1;
     end;
     {* Set initial AI victims :}
@@ -369,7 +369,7 @@ begin
   SetTextStyle(DefaultFont,HorizDir,1);
   OutTextXY(110,110,Msg);
   OutTextXY(110,130,'Press the ''C'' key to continue...');
-  REPEAT UNTIL Readkey='C';
+  REPEAT UNTIL UpCase(ReadKey)='C';
 end;
 
 
@@ -479,7 +479,7 @@ begin
   OutTextXY(135,380,'Customise your game to one that suits you.');
   Ch:='1';
   While (Ch<>'A') and (CH<>'B') and (Ch<>'C')
-  and (CH<>'D') and (CH<>'E') and (Ch<>'X') do Ch:=ReadKey;
+  and (CH<>'D') and (CH<>'E') and (Ch<>'X') do Ch:=UpCase(ReadKey);
 end;
 
 

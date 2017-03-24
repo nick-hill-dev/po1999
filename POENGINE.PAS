@@ -404,7 +404,7 @@ begin
   Cycles:=0;
   repeat
     Cycles:=Cycles+1; If Cycles=11 then Cycles:=0;
-    C:='^'; if Keypressed=true then C:=ReadKey;
+    C:='^'; if Keypressed=true then C:=UpCase(ReadKey);
     for G:=1 to NumHumanPlayers do begin                {* Process humans}
       if Alive[G]=1 then begin
         if C=KUp[G] then DIR[G]:=1;
