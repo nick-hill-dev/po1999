@@ -2,5 +2,12 @@
 <Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\Program Files (x86)\PowerBuild 2.0\Project.xsd" SchemaVersion="0">
   <ProjectID>4c503bd4-31a8-4bbb-9779-8d1ce2631742</ProjectID>
   <ProjectName>Podantious</ProjectName>
-  <Dependencies />
+  <Dependencies>
+    <Dependency>
+	  <Path>Third Party/DOSBox</Path>
+	</Dependency>
+	<Dependency>
+	  <Path>Third Party/Turbo Pascal</Path>
+	</Dependency>
+  </Dependencies>
 </Project>
